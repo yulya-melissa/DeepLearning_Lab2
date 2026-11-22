@@ -1,0 +1,141 @@
+{
+  "track": "cv",
+  "model": "yolo26n.pt",
+  "revision": "ultralytics==8.4.216; sha256=9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "dataset": "Aquarium Combined — https://universe.roboflow.com/brad-dwyer/aquarium-combined — CC BY 4.0",
+  "classes": [
+    "fish",
+    "jellyfish",
+    "penguin",
+    "puffin",
+    "shark",
+    "starfish",
+    "stingray"
+  ],
+  "n_train": 448,
+  "n_val": 127,
+  "n_test": 63,
+  "params_total": 2572280,
+  "baseline": {
+    "split": "test",
+    "coco_map50": 0.0,
+    "heuristic_map50": 0.003273900712594559,
+    "heuristic_ap50_per_class": {
+      "fish": 0.006374902085221568,
+      "jellyfish": 0.006885074724270705,
+      "penguin": 0.0,
+      "puffin": 0.0007722007722007722,
+      "shark": 0.004339672861014323,
+      "starfish": 0.004545454545454546,
+      "stingray": 0.0
+    }
+  },
+  "final": {
+    "map50": 0.814366675381733,
+    "map50_95": 0.501731564288635,
+    "precision": 0.8977608468176612,
+    "recall": 0.7227540437137494,
+    "per_class": {
+      "fish": {
+        "precision": 0.7810407919185048,
+        "recall": 0.6746987951807228,
+        "ap50": 0.7633926347114399,
+        "ap50_95": 0.4402420566761151
+      },
+      "jellyfish": {
+        "precision": 0.8537913359035572,
+        "recall": 0.8342307432749616,
+        "ap50": 0.891524805125665,
+        "ap50_95": 0.547966254840608
+      },
+      "penguin": {
+        "precision": 0.9458742997759488,
+        "recall": 0.6707317073170732,
+        "ap50": 0.8010445013968319,
+        "ap50_95": 0.35263831732744083
+      },
+      "puffin": {
+        "precision": 0.9083979687141287,
+        "recall": 0.45714285714285713,
+        "ap50": 0.5371202762006989,
+        "ap50_95": 0.27420944166349814
+      },
+      "shark": {
+        "precision": 0.8861602102157518,
+        "recall": 0.8055555555555556,
+        "ap50": 0.8652756080285933,
+        "ap50_95": 0.6118441704059278
+      },
+      "starfish": {
+        "precision": 0.9090613211957372,
+        "recall": 0.9087950301391912,
+        "ap50": 0.9675324675324676,
+        "ap50_95": 0.5803950501253133
+      },
+      "stingray": {
+        "precision": 1.0,
+        "recall": 0.7081236173858841,
+        "ap50": 0.8746764346764346,
+        "ap50_95": 0.7048256589815413
+      }
+    },
+    "split": "test",
+    "map50_own": 0.8092278675031445
+  },
+  "ablation": {
+    "changed": "imgsz",
+    "values": [
+      640,
+      320
+    ],
+    "split": "val",
+    "map50": [
+      0.7750269342811055,
+      0.6627467169916594
+    ],
+    "map50_95": [
+      0.4881855615497652,
+      0.3712939815032744
+    ],
+    "train_time_sec": [
+      519.2940179929992,
+      377.26082656900144
+    ]
+  },
+  "errors": {
+    "tp": 721,
+    "class": 29,
+    "localization": 42,
+    "background": 199,
+    "missed": 135
+  },
+  "device": "Tesla T4",
+  "train_time_sec": 519.2940179929992,
+  "fast_mode": false,
+  "train_args": {
+    "epochs": 60,
+    "imgsz": 640,
+    "batch": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "cos_lr": true,
+    "patience": 15,
+    "warmup_epochs": 3,
+    "close_mosaic": 10,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "mosaic": 1.0,
+    "degrees": 0.0,
+    "seed": 0,
+    "deterministic": true,
+    "cache": "ram",
+    "plots": true,
+    "val": true
+  },
+  "run_times": {
+    "heuristic": 4.3604701530002785,
+    "train": 519.2940179929992,
+    "ablation": 377.26082656900144
+  }
+}
